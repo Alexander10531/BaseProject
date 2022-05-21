@@ -1,0 +1,16 @@
+<nav class="navigationBar">
+    <ul>
+        <li 
+            [class.active]="i.active"
+            *ngFor="let i of dataNavigation; let j = index"
+            class="navigation-item">
+            <button (click)="doFunction(i, j)">
+                <fa-icon
+                    [icon]="i.icon"
+                    class="icono">
+                </fa-icon>
+                <span>{{ i.text }}</span>
+            </button>
+        </li>
+    </ul>
+</nav>

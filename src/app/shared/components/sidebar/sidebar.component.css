@@ -1,0 +1,211 @@
+*{
+    --xPosition : 250px; 
+}
+
+body{
+    overflow: hidden;
+}
+
+aside{
+
+    top: 0px;
+    z-index: 2;
+    height: 100vh;
+    padding: 10px;
+    position : fixed;
+    box-sizing: border-box;
+    width: var(--xPosition);
+    font-family: var(--mainFont);
+    left: calc(-1 * var(--xPosition));
+    background-color: var(--main-ColorE);
+    animation: slideSidebar .4s ease-out 0s 1 forwards;
+
+}
+
+.contenedor-fondo{
+    
+    top : 0px;
+    z-index: 2;
+    width : 100%;
+    height: 100vh;
+    position : fixed;
+    background-color: rgba(0, 0, 0, .45);
+
+}
+
+.contenedor-perfil{
+
+    width: 100%;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    padding: 15px 10px;
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    justify-content: space-evenly;
+    font-family: var(--mainFont);
+
+}
+
+.abr-nombre{
+    --height-name : 35px;
+
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    justify-content: center;
+    width: var(--height-name);
+    height: var(--height-name);
+    background: var(--main-ColorG);
+
+}
+
+.activo{
+
+    background-color: #E6E6E6;
+
+}
+
+.activo span, 
+.activo .icono{
+
+    color: var(--main-ColorE) !important;
+
+}
+
+.contenedor-perfil:hover{
+
+    background : var(--main-ColorG);
+
+}
+
+.navegacion-sidebar{
+
+    margin: 10px 0px 0px 0px;
+    font-family: var(--mainFont);
+
+}
+
+.navegacion-item{
+
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.item:hover{
+
+    border-color: white !important;
+
+}
+
+.navegacion-item span{
+
+    margin-left: 5px;
+
+}
+
+.navegacion-item > a, 
+.navegacion-item > button{
+    
+    all : unset;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+}
+
+.button-dropdown:focus + .lista-subItems > .subItem{
+
+    display: block;
+
+}
+
+.subItem:hover{
+
+    display: block;
+
+}
+
+.subItem:focus ~ .subItem{
+
+    display: block;
+
+}
+
+.subItem:hover{
+
+    background-color: var(--main-ColorF);
+
+}
+
+.icono-colapso{
+
+    margin : auto 0px auto auto; 
+
+}
+
+.st0{
+
+    stroke-width:3;
+    stroke:white;
+
+}
+
+.icono{
+
+    min-width: 20px;
+
+}
+
+.lista-subItems{
+
+    list-style: none;
+    background: var(--main-ColorD);
+
+}
+
+.subItem{
+
+    display: none;
+    transition: all .5s;
+
+}
+
+.subItem:focus,
+.subItem:focus-visible{
+    
+    display: block;
+
+}
+
+.subItem > a{
+    
+    width: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px 5px 10px 35px;
+
+}
+
+
+@keyframes slideSidebar{
+    
+    0%{
+        left: calc(-1 * var(--xPosition));
+    }
+    100%{
+        left: 0px;
+    }
+
+}

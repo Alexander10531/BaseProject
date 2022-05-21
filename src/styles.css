@@ -1,1 +1,317 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+
+    margin : 0px; 
+    padding : 0px; 
+    font-family: var(--mainFont);
+
+}
+
+body{
+
+    line-height: 1em;
+    background: #F0F0F0;
+
+}
+
+dl,ol, ul{
+    margin: 0px;
+}
+
+:root{
+
+    --heigthHeader : 70px;
+    --defaultPadding : 50px;
+    --defaultFontSize : 14px; 
+    --border-bottom-color: #BDBDBD;  
+    --mainFont : 'Roboto', sans-serif;
+    
+    --main-ColorA : #E87D82; 
+    --main-ColorB : #E4686D;
+    --main-ColorC : #E15258;
+    --main-ColorD : #DD3D43;
+    --main-ColorE : #D9272E;
+    --main-ColorF : #C32329;
+    --main-ColorG : #AE1F25;
+    --main-ColorH : #981B20;
+    --main-ColorI : #82171C;
+
+    --secondary-ColorA : #9DAF72; 
+    --secondary-ColorB : #8CA25B;
+    --secondary-ColorC : #7C9543;
+    --secondary-ColorD : #6B872C;
+    --secondary-ColorE : #5B7A14;
+    --secondary-ColorF : #526E12;
+    --secondary-ColorG : #496210;
+    --secondary-ColorH : #40550E;
+    --secondary-ColorI : #37490C;
+
+    --tertiary-ColorA : #DDD173; 
+    --tertiary-ColorB : #D8CA5C;
+    --tertiary-ColorC : #D2C245;
+    --tertiary-ColorD : #CDBB2D;
+    --tertiary-ColorE : #C7B316;
+    --tertiary-ColorF : #B3A114;
+    --tertiary-ColorG : #9F8F12;
+    --tertiary-ColorH : #8B7D0F;
+    --tertiary-ColorI : #776B0D;
+
+    --background-ColorA : #fbfbfb; 
+    --background-ColorB : #fafafa;
+    --background-ColorC : #f9f9f9;
+    --background-ColorD : #f9f9f9;
+    --background-ColorE : #f8f8f8;
+    --background-ColorF : #dfdfdf;
+    --background-ColorG : #c6c6c6;
+    --background-ColorH : #aeaeae;
+    --background-ColorI : #959595;
+
+}
+
+.button{
+
+    border: none;    
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 2px;
+    border-radius : 5px; 
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+
+.button:focus{
+
+    outline: none;
+
+}
+
+.button-solid{
+    
+    color: white;
+    background : var(--base-color);
+    
+}
+
+.button>span{
+
+    z-index: 3;
+    display: block;
+    position: relative;
+
+}
+
+.button-solid>span{
+
+    z-index: 3;
+    display: block;
+    position: relative;
+
+}
+
+.background-hover{
+    
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    z-index: 2; 
+    height: 100%;
+    border-radius: 5px; 
+    position: absolute;
+    transition: all .4s; 
+    background: var(--hover-color);
+    
+}
+
+.button-solid:hover>.background-hover, 
+.button-solid:focus>.background-hover, 
+.button-solid:focus-within>.background-hover{
+
+    width: 100% 
+    
+}
+
+.button:hover>.background-hover, 
+.button:focus>.background-hover, 
+.button:focus-within>.background-hover{
+    
+    width: 100%;
+    
+}
+
+.button:hover>span, 
+.button:focus>span, 
+.button:focus-within>span{
+    
+    color : white;
+    
+}
+
+.input{
+    
+    --base-color : #000000;
+    
+    all : unset;
+    width: 100%;
+    transition: .3s all;
+    box-sizing: border-box;
+    font-family : var(--mainFont);
+
+}
+
+.input-light{
+
+    padding : 10px;
+    border-bottom: 1px solid var(--base-color);
+
+}
+
+.input-solid{
+    
+    --base-color : #564D4D;
+    
+    padding : 10px; 
+    background : white; 
+    border-radius : 5px; 
+    border: 1px solid var(--base-color);
+    
+}
+
+.input::placeholder{
+    
+    color : var(--base-color); 
+    font-family : var(--mainFont);
+       
+}
+
+
+.tertiary{
+  
+    --base-color : var(--tertiary-ColorE);
+    --hover-color : var(--tertiary-ColorI);
+
+}
+
+.main{
+        
+    --base-color : var(--main-ColorE);
+    --hover-color : var(--main-ColorI);
+    
+}
+
+.secondary{
+        
+    --base-color : var(--secondary-ColorE);
+    --hover-color : var(--secondary-ColorI);
+    
+}
+
+.text-start{
+    
+    text-align : start;
+
+}
+
+.text-end{
+
+    text-align: end; 
+
+}
+
+.hidden{
+
+    overflow: hidden;
+
+}
+
+.reverse{
+    
+    transform: rotate(180deg);
+
+}
+
+.error-input{
+
+    --base-color : var(--main-ColorE);
+
+    color: var(--main-ColorE);
+    border-bottom: 2px solid var(--base-color);
+
+
+}
+
+.success-input{
+
+    --base-color : var(--secondary-ColorE);
+
+    color: var(--base-color);
+    border-bottom: 2px solid var(--base-color);
+
+}
+
+.box-sizing{
+
+    box-sizing: border-box;
+
+}
+
+.flex-center{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-whites{
+
+    padding: 10px 5px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.button-whites:hover,
+.button-whites:focus-visible,
+.button-whites:focus-within{
+    
+    transition: all .1s;
+    transform: scale(1.1);
+
+}
+
+.button-light{
+    
+    color : var(--base-color);
+    border: 1px solid var(--base-color);
+    
+}
+
+.display-none{
+    
+    display: none !important;
+
+}
+
+.span-title{
+
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.text-example{
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000091;
+
+}
+
+.errorValue{
+
+    color: var(--main-ColorE);
+
+}

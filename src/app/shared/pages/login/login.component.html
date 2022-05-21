@@ -1,0 +1,66 @@
+<section
+    class="section-login">
+    <div class="filter-blur">
+    </div>
+    <div class="login">
+        <div class="nameModule">
+            Sistema de gestion e inventario
+        </div>
+        <div class="container-logo">
+            <svg 
+            x="0px" y="0px" width="192.6px" class="logo"
+            height="170.3px" viewBox="0 0 192.6 170.3">
+                <g>
+                    <g>
+                        <path class="st0" d="M192.6,92c0,19.1,0,38.3,0,57.4c0,1.1,0,19.9,0,19.9c0,0-67.4,0-67.4,0v-63.8c-1.3-16.8-9.1-17.4-10.2-17.4
+                            c-0.1,0-0.1,0-0.1,0H77.5V25h49.7c1.2-0.1,2.4-0.1,3.6-0.1c34.1,0,61.8,27.7,61.8,61.8C192.6,88.5,192.6,90.2,192.6,92z"/>
+                        <path class="st0" d="M116.6,114.1v54.4c0,1-0.8,1.8-1.8,1.8H54.7v0.1c-29.9-2.5-54.7-28.9-54.7-59.5c0-1.7-0.1-3.4,0-5.1l0,0V1.8
+                            c0-1,0.8-1.8,1.8-1.8h67.3c1,0,1.8,0.8,1.8,1.8v102.4c0,1.1,0.3,2.3,1,3.2c0.9,1.3,2.5,3.1,4.9,4.3c0.9,0.4,1.9,0.7,2.9,0.7h35.2
+                            C115.8,112.3,116.6,113.1,116.6,114.1z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div
+            class="container-login">
+            <h1>¡Bienvenido!</h1>
+            <h2>Por favor, inicia sesión.</h2>
+            <form 
+                (ngSubmit)="submitLogin()"
+                [formGroup]="formLogin"
+                action="">
+                <input
+                    [class.error-input]="formLogin.controls.email.invalid == true && this.formLogin.controls.email.dirty == true"
+                    [class.success-input]="formLogin.controls.email.valid == true && this.formLogin.controls.email.dirty == true"
+                    autocomplete="off"
+                    formControlName="email"
+                    placeholder="Ingrese su correo"
+                    class="input input-light min-width" 
+                    type="text">
+                <span
+                    *ngIf="formLogin.controls.email.invalid == true && this.formLogin.controls.email.dirty == true"
+                    class="messageError">
+                    El correo ingresado no es valido
+                </span>
+                <input
+                    [class.error-input]="formLogin.controls.password.invalid == true && this.formLogin.controls.password.dirty == true"
+                    [class.success-input]="formLogin.controls.password.valid == true && this.formLogin.controls.password.dirty == true"
+                    autocomplete="off"
+                    formControlName="password"
+                    placeholder="Ingrese su contraseña"
+                    type="password"
+                    class="input input-light min-width">
+                <button 
+                    class="button button-solid main text-start min-width">
+                    <span>Iniciar sesion</span>
+                    <div class="background-hover"></div>
+                </button>   
+                <span
+                    class="messageError"
+                    *ngIf="errorRequest">
+                    {{ errorRequest }}
+                </span>
+            </form>
+        </div>
+    </div>
+</section>

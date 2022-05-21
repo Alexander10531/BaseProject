@@ -1,0 +1,47 @@
+*:hover{
+    text-decoration: none;
+}
+
+.breadcrumb-container{
+    
+    display: flex;
+    margin: 10px 0px;
+
+}
+
+.breadcrumb{
+
+    margin: 0px;
+    display: flex;
+    display: flex;
+    min-width: 100px;
+    padding: 10px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+
+}
+
+.icon-Home{
+
+    color: var(--main-ColorA);
+
+}
+
+.arrow{
+
+    margin: 0px 3px;
+    color: rgba(0, 0, 0, .8);
+
+}
+
+.activeSpan{
+
+    font-weight: 500;
+    color: var(--main-ColorF) !important;
+
+}
+
+.link{
+    color: rgba(0, 0, 0, .50);
+}

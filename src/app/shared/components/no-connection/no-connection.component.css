@@ -1,0 +1,44 @@
+.wifiIcon{
+
+    font-size: 55px;
+    animation: animationError 1s infinite;
+
+}
+
+.error-container{
+
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: var(--main-ColorE);
+
+}
+
+.errorWifi{
+
+    position: relative;
+
+}
+
+.titleError{
+
+    font-size: 35px;
+
+}
+
+.messageError{
+
+    font-size: 20px;
+
+}
+
+@keyframes animationError {
+    
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}

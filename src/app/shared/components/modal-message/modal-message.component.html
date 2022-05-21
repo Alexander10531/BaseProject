@@ -1,0 +1,30 @@
+<div class="container-modal">
+    <div class="modal-message">
+        <hr class="line-divider">
+        <div class="container-content">
+            <fa-icon
+                class="iconContent"
+                [ngClass]="icon.classes" 
+                [icon]="icon.icon">
+            </fa-icon>
+            <p
+                [class]="content.classes"
+                *ngIf="content.classes">
+                {{ content.text }}
+            </p>
+            <p
+                *ngIf="!content.classes">
+                {{ content.text }}
+            </p>
+        </div>
+        <div class="container-buttons">
+            <button
+                *ngFor="let i of button" 
+                (click)="clickButton(i)"
+                [ngClass]="i.classes">
+                <span>{{ i.name }}</span>
+                <div class="background-hover"></div>
+            </button>
+        </div>
+    </div>
+</div>

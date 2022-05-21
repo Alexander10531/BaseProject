@@ -1,0 +1,146 @@
+<div class="container-table">
+    <!-- Botones de acciones: Añadir, eliminar, modificar -->
+    <div
+        class="container-button-actions">
+        <button
+            *ngFor="let i of actionButtons"
+            (click)="returnFunction( i.callbackFunc )"
+            tabindex="0"
+            [ngClass]="i.classes"
+            class="button-actions">
+                <fa-icon [icon]="i.icon"></fa-icon>
+        </button>
+    </div>
+    <!-- Botones de acciones: Añadir, eliminar, modificar -->
+    <!-- Botones solidos: Importar archivo, exportar archivo -->
+    <div
+        *ngIf="buttons.length > 0"
+        class="container-buttons">
+        <div>
+            <button
+                class="button button-whites default-button">
+                <fa-icon [icon]="faFilter"></fa-icon>
+                Filtro
+            </button>
+        </div>
+        <div>
+            <button
+                *ngFor="let i of buttons"
+                (click)="returnFunction( i.callback )"
+                [ngClass]="i.classes"
+                class="button button-whites">
+                {{ i['name'] }}
+            </button>
+        </div>
+    </div>
+    <!-- Botones solidos: Importar archivo, exportar archivo -->
+    <!-- Contenedor de busqueda -->
+    <div class="container-input">
+        <input
+            [(ngModel)]="searchValue" 
+            (keyup)="searchData()"
+            placeholder="¿Desea buscar algo?"
+            type="text" 
+            class="search-table">
+    </div>
+    <!-- Contenedor de busqueda -->
+    <!-- Tabla responsiva: Bootstrap -->
+    <div    
+        *ngIf="actualData.length == 0"
+        class="empty-table">
+        <fa-icon [icon]="faFrown"></fa-icon>  
+        <span>No hay registros que mostrar, lo sentimos.</span>     
+    </div>
+    <div class="table-responsive">
+        <table 
+            *ngIf="actualData.length > 0"
+            class="table">
+            <thead>
+              <tr 
+                class="box-sizing">
+                    <th 
+                        *ngFor="let i of headers"
+                        scope="col">{{ i | titlecase }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    tabindex="0"
+                    class="tr-table box-sizing"
+                    *ngFor="let i of actualData; let j = index">
+                    <th
+                        *ngFor="let j of i">
+                        <a
+                            *ngIf="j.url" 
+                            [routerLink]="j.url">
+                            <span>
+                                {{ j.text | titlecase }}
+                            </span>
+                        </a>
+                        <span
+                            *ngIf="!j.url">
+                            {{ j.text | titlecase }}
+                        </span>
+                    </th>
+                    <th
+                        *ngFor="let x of buttonRegister">
+                        <button 
+                            (click)="returnFunction( x.callbackFunc, i, j )"
+                            class="button-actions button-th">
+                            <fa-icon [icon]="x.icon"></fa-icon>
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Tabla responsiva: Bootstrap -->
+    <!-- Botones de paginacion -->
+    <div class="container-pagination">
+        <div
+            *ngIf="paginationShow">
+            <span>Mostrar</span>
+            <input
+                (ngModelChange)="changeValue($event)"
+                [(ngModel)]="pagination"
+                [value]="pagination"
+                class="input-pagination" 
+                type="text">
+            <span>de {{ data.length }} registros</span>
+        </div>
+        <div
+            *ngIf="paginationShow" 
+            class="pagination">
+            <button
+                tabindex="0"
+                (click)="changeData(-1)"
+                class="table-button">
+            <svg 
+                class="button-icon" 
+                x="0px" 
+                y="0px" 
+                width="18.1px"
+                height="19px" 
+                viewBox="0 0 18.1 19">
+                <path class="arrow-table" d="M18.1,18V1c0-0.8-0.8-1.2-1.5-0.9L0.5,8.6c-0.7,0.4-0.7,1.4,0,1.8l16.1,8.5C17.3,19.3,18.1,18.8,18.1,18z"/>
+            </svg>
+            </button>
+            <span>{{ (actualIndex * pagination) + 1 }}-{{ this.actualIndex * this.pagination + this.pagination }} de {{ data.length }}</span>
+            <button 
+                tabindex="0"
+                (click)="changeData(1)"
+                class="table-button">
+                <svg
+                    class="button-icon reverse" 
+                    x="0px" 
+                    y="0px" 
+                    width="18.1px"
+                    height="19px" 
+                    viewBox="0 0 18.1 19">
+                        <path class="arrow-table" d="M18.1,18V1c0-0.8-0.8-1.2-1.5-0.9L0.5,8.6c-0.7,0.4-0.7,1.4,0,1.8l16.1,8.5C17.3,19.3,18.1,18.8,18.1,18z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Botones de paginacion -->
+</div>

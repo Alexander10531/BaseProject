@@ -1,0 +1,115 @@
+.container-modal{
+
+    --padding-modal : 10px; 
+
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mainFont);
+    
+}
+
+.container-modal{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000002e;
+    
+}
+
+.modal-message{
+
+    width: 400px;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    animation-duration: .5s;
+    animation: animationBox .5s forwards;
+
+}
+
+.container-title{
+
+    padding: 20px;
+    
+}
+
+.container-title span{
+
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.line-divider{
+
+    margin: 0px 0px var(--padding-modal) 0px;
+    border-top: 1px solid rgba(0,0,0,.30);
+
+}
+
+.container-content{
+
+    text-align: center;
+    padding: var(--padding-modal);
+
+}
+
+.container-content p{
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.container-buttons{
+
+    text-align: center;
+    padding: var(--padding-modal);
+
+}
+
+.container-buttons button{
+
+    margin: 0px 5px;
+
+}
+
+.iconContent{
+
+    display: block;
+    font-size: 30px;
+    margin: 10px 0px;
+
+}
+
+@keyframes animationBox{
+
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    
+    .modal-message{
+
+        width: 250px;
+    
+    }
+
+}

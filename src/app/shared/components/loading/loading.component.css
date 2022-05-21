@@ -1,0 +1,21 @@
+.st0{
+    
+    fill:#D50C21;
+
+}
+
+.logo-loading{
+ 
+    animation: loading-logo 2s infinite;
+
+}
+
+@keyframes loading-logo{
+
+    from{
+        transform : rotate(0deg)
+    }
+    to{
+        transform : rotate(360deg)
+    }
+}

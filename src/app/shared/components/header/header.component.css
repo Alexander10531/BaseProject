@@ -1,0 +1,179 @@
+header{
+    
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+    display : flex;
+    position: fixed;
+    align-items: center;
+    flex-direction : row;
+    box-sizing: border-box;
+    height: var(--heigthHeader);
+    justify-content: space-between;
+    background: var(--main-ColorE);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.35);
+
+}
+
+.button-bars{
+    
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    border: transparent;
+    background: transparent;
+    margin: 0px 0px 0px var(--defaultPadding);
+
+}
+
+.container-profile{
+
+    all : unset;
+    height: 100%;
+    display: flex;
+    position: relative;
+    box-shadow: 0px 0px 0px 0px black;
+
+}
+
+.container-profile:hover,
+.container-profile:focus
+{
+    
+    cursor: pointer;
+    background: var(--main-ColorG);
+
+}
+
+.abr-name, 
+.profile-name{
+
+    color: white;
+    margin: auto 7px;
+    display: inherit;
+    align-items: center;
+    font-family: var(--mainFont);
+
+}
+
+.st0{
+
+    fill: white;
+    width : 30px;
+
+}
+
+.logo{
+
+    --logoHeight : 45px; 
+    
+    text-decoration: none; 
+    height: var(--logoHeight);
+
+}
+
+.logo > svg{
+
+    width : var(--logoHeight);
+    height : var(--logoHeight);
+
+}
+
+.abr-name{
+
+    width: 35px;
+    height: 35px;
+    margin: auto 0px;
+    border-radius: 100%;
+    background: var(--main-ColorG);
+
+}
+
+.abr-name span{
+
+    margin: auto;
+
+}
+
+.dropdown{
+
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    top: var(--heigthHeader);
+    box-shadow: 3px 1px 5px 0px #000000ad;
+
+}
+
+.dropdown > ul{
+
+    list-style: none;
+
+}
+
+.drop-element{
+
+    width: 100%;
+    display: none;
+    background: white;
+
+} 
+
+.drop-element:hover{
+
+    color: white;
+    background-color: var(--main-ColorE);
+
+}
+
+.drop-element a{
+
+    width: 100%;
+    color: black;
+    display: block;
+    padding: 20px 15px;
+
+}
+
+.drop-element:hover a{
+
+    color: white;
+    background-color: var(--main-ColorE);
+
+}
+
+.container-profile:focus .drop-element,
+.container-profile:hover .drop-element{
+
+    display: block;
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    .logo{
+
+        --logoHeight : 30px ; 
+
+    }
+    
+    .profile-name{
+
+        display: none !important;
+
+    }
+
+    .container-profile{
+
+        padding: 0px 8px;
+        position: static;
+    
+    }
+
+    .dropdown{
+
+        left: 0%;
+
+    }
+
+}

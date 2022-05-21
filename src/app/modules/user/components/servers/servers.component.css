@@ -1,0 +1,5 @@
+.container-applications{
+
+    margin: calc(var(--heigthHeader) + 20px) 0px 0px 0px;
+
+}

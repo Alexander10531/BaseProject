@@ -1,0 +1,28 @@
+<div
+    class="breadcrumb-container">
+    <div
+        class="breadcrumb">
+        <a 
+            href="">
+            <span>
+                <fa-icon
+                    class="icon-Home" 
+                    [icon]="faHome">
+                </fa-icon>
+            </span>
+            <span class="arrow">></span>
+        </a>
+        <a 
+            *ngFor="let i of url; let j = index"
+            href="">
+            <span
+                class="link"
+                [class.activeSpan] = "j == (url.length - 1)">
+                {{ i }}
+            </span>
+            <span class="arrow" 
+                *ngIf="j != (url.length - 1)">>
+            </span>
+        </a>
+    </div>
+</div>

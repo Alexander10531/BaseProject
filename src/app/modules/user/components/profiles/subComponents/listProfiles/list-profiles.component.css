@@ -1,0 +1,196 @@
+.container-profiles{
+ 
+    --defaultMargin: 20px;
+    
+    width: 100%;
+    justify-content: center;
+    padding: 0px var(--defaultPadding) 0px var(--defaultPadding);
+    background-color: #f0f0f0;
+    margin: calc(var(--heigthHeader) + var(--defaultMargin)) 0px 0px 0px;
+
+}
+
+.container-buttons{
+
+    padding: 0px 20px;
+    margin: 0px 0px 0px auto;    
+
+}
+
+.button-whites{
+
+    margin: 0px 5px;
+
+}
+
+.container-modal-create{
+
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100vw;
+    display: flex; 
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+
+}
+
+.modal-create{
+
+    width: 50%;
+    padding: 20px;
+    height: 300px;
+    overflow-y: scroll;
+    background: white;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 25%);
+
+}
+
+.modal-create::-webkit-scrollbar{
+
+    width: 12px;
+
+}
+
+.modal-create::-webkit-scrollbar-track{
+
+    width: 7px;
+    
+}
+
+.modal-create::-webkit-scrollbar-thumb {
+    
+    width: 7px;
+    border-radius: 5px;
+    background-color: #AAAAAA;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+
+}
+
+.modal-create::-webkit-scrollbar-thumb:hover {
+
+    width: 7px;
+    background: rgb(41, 40, 40); 
+    border-radius: 5px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+
+}
+
+.input{
+
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .05);
+
+}
+
+.button-display{
+
+    width: 100%;
+    padding: 2px;
+    color: rgba(0, 0, 0, 0.568);
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #00000059;
+
+}
+
+
+.arrow-down{
+
+    right: 5px;
+    position: absolute;
+    transform: rotate(180deg);
+    color: rgba(0, 0, 0, 0.568);
+
+}
+
+.button{
+
+    padding: 5px;
+    font-size: 18px;
+
+}
+
+.button:focus, 
+.button:focus-visible,
+.button:focus-within{
+
+    outline: none;
+
+} 
+
+.container-buttons-modal{
+    
+    margin: 10px 0px;
+    display: flex;
+
+}
+
+.hr-profile{
+    
+    margin: 10px 0px;
+
+}
+
+.input-profile::placeholder{
+
+    color: rgb(121, 120, 120);
+
+}
+
+.subTitle{
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #514f4f;
+
+}
+
+.text-example{
+
+    display: block;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+
+}
+
+.header-modal{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.close-container{
+
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: auto;
+    color: var(--main-ColorE);
+    cursor: pointer;
+
+}
+
+.close-container button{
+ 
+    all: unset;
+
+}
+
+.container-table{
+
+    margin: 0px 0px 20px 0px;
+
+}

@@ -1,0 +1,54 @@
+.container-applications{
+    --defaultMargin: 20px; 
+
+    width: 100%;
+    justify-content: center;
+    background-color: #f0f0f0;
+    margin-top: calc(var(--heigthHeader) + var(--defaultMargin));
+    
+}
+
+.container-loading{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - (var(--heigthHeader) + var(--defaultMargin)));
+
+}
+
+.container-loading > span{
+
+    display: block;
+
+}
+
+.loading{
+
+    display: block;
+
+}
+
+.loading > *{
+
+    display: block;
+    text-align: center;
+
+}
+
+.loading>span{
+    
+    font-size: 25px;
+    margin: 25px 0px;
+    font-weight: 400;
+    color: var(--main-ColorE);
+}
+
+
+.error-container{
+    
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - (var(--heigthHeader) + var(--defaultMargin)));
+
+}

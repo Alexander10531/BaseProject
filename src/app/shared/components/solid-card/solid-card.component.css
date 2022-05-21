@@ -1,0 +1,45 @@
+.article{
+    
+    --dimensionWidth : 250px;
+    
+    width : auto; 
+    color : white; 
+    padding : 10px;
+    overflow : hidden;
+    border-radius: 3px;
+    position : relative;
+    box-sizing : border-box;
+    font-family : var(--mainFont);
+    background : var(--main-ColorE);
+    max-width : var(--dimensionWidth);
+
+}
+
+.triangle{
+    
+    top : 0%; 
+    z-index : 0; 
+    position : absolute;
+    transform : rotate(45deg);
+    background : var(--background-color); 
+    width : calc(var(--dimensionWidth) / var(--divider));
+    height : calc(var(--dimensionWidth) / var(--divider));
+    right : calc((-1 * (var(--dimensionWidth) / var(--divider2))) - var(--margin));
+
+}
+
+.triangleVar{
+ 
+    --divider : 2;
+    --divider2 : 4; 
+    --margin : 10px;
+    --background-color : var(--main-ColorH);
+    
+}
+
+.text{
+    
+    position : relative; 
+    z-index: 1;
+
+}

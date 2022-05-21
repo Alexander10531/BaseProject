@@ -1,0 +1,40 @@
+
+<section
+    class="container-profile">
+    <nav
+        class="container-nav">
+        <ul 
+            class="nav-container">
+            <li
+                class="li-container active">
+                <a 
+                    href=""
+                    class="link-informacion">
+                    <span>Informacion principal</span>
+                    <div 
+                        class="icon-container">
+                        <fa-icon [icon]="faUser"></fa-icon>
+                    </div>
+                </a>
+            </li>
+            <li
+                class="li-container">
+                <a
+                    routerLink="['home','myinventary']"
+                    class="link-informacion">
+                    <span>Mi inventario</span>
+                    <div 
+                        class="icon-container">
+                        <fa-icon [icon]="faBoxes"></fa-icon>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <app-table 
+    *ngIf="data.length > 0"
+    [data]="data"
+    [headers]="['ID','Nombre','Numero Serie', 'Numero Inventario', 'Marca', 'Estado']"
+    [paginationShow]="false">
+    </app-table>
+</section>

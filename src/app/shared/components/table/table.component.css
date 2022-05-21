@@ -1,0 +1,269 @@
+*{
+
+    line-height: 1.1em;
+    font-size: 14px;
+
+}
+
+.container-table{
+
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 30px;
+    background: white;
+    box-sizing: border-box;
+
+}
+
+.search-table{
+
+    width: 100%;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    border: 1px solid #0000003b;
+
+}
+
+th,
+td {
+
+    text-align: center;
+    font-family: var(--mainFont);
+    border-top: 0px solid transparent;
+    border-bottom: 1px solid rgba(217, 39, 46, .30);
+
+}
+
+.table thead th{
+
+    border-bottom: 2px solid rgba(217, 39, 46, .7);
+
+}
+
+.container-pagination{
+    width: 100%;
+    display: flex;
+}
+
+.table-button{
+    all: unset;
+}
+
+.button{
+
+    margin: 0px 5px;
+
+}
+
+.button-icon{
+
+    display: block;
+    cursor: pointer;
+
+}
+
+.arrow-table{
+
+    fill: var(--main-ColorD);
+
+}
+
+.arrow-table:hover, 
+.arrow-table:focus{
+
+    outline: none;
+    fill: var(--main-ColorE);
+
+}
+
+.pagination{
+
+    display: inherit;
+    margin: 0px 0px 0px auto;
+
+}
+
+.tr-table > th{
+
+    cursor: pointer;
+    font-weight: 400;
+
+}
+
+.tr-table:hover, 
+.tr-table:focus{
+
+    outline: none;
+    background: var(--main-ColorE);
+
+}
+
+.tr-table:hover > th, 
+.tr-table:focus > th{
+
+    color: white;
+
+}
+
+.delete-button{
+
+    color: var(--main-ColorE);
+
+}
+
+.create-button{
+
+    color: var(--secondary-ColorE);
+
+}
+
+.warning-button{
+
+    color: var(--tertiary-ColorE);
+
+}
+
+.container-buttons{
+
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 15px 0px;
+
+}
+
+.container-buttons > div:nth-of-type(2){
+    
+    margin: 0px 0px 0px auto;
+
+}
+
+.default-button{
+
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.search-table:hover,
+.search-table:focus{
+
+    outline: none;
+    border: 1px solid var(--secondary-ColorF);
+
+}
+
+.button-actions{
+
+    --color-button: #00000075;
+    --dimensions : 30px;
+
+    all: unset;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px 5px 0px 0px;
+    width: var(--dimensions);
+    height: var(--dimensions);
+    border-radius: var(--dimensions);
+
+}
+
+.container-button-actions{
+
+    display: flex;
+    margin: 0px 0px 10px 0px;
+    justify-content: flex-end;
+
+}
+
+.create-action-button{
+
+    --color : var(--secondary-ColorE);
+
+    color: var(--secondary-ColorE);
+    border: 1px solid var(--secondary-ColorE);
+
+}
+
+.warning-action-button{
+
+    --color : var(--tertiary-ColorE);
+
+    color: var(--tertiary-ColorE);
+    border: 1px solid var(--tertiary-ColorE);
+
+}
+
+.delete-action-button{
+
+    --color : var(--main-ColorE);
+
+    color: var(--main-ColorE);
+    border: 1px solid var(--main-ColorE);
+
+}
+
+.delete-action-button:hover, 
+.warning-action-button:hover, 
+.create-action-button:hover,
+.delete-action-button:focus, 
+.warning-action-button:focus, 
+.create-action-button:focus,
+.delete-action-button:focus-visible, 
+.warning-action-button:focus-visible, 
+.create-action-button:focus-visible{
+
+    color: white;
+    background-color: var(--color);
+
+}
+
+.button-th{
+
+    color: white;
+    background: #000000c2;
+
+}
+
+.button-th:hover{
+
+    background: black;
+
+}
+
+.input-pagination{
+    
+    width: 30px;
+    margin: 0px 5px;
+    text-align: center;
+
+}
+
+.empty-table{
+
+    text-align: center;
+
+}
+
+.empty-table * {
+
+    display: block;
+    color: var(--main-ColorE);
+    margin: 0px 0px 10px 0px;
+
+}
+
+.empty-table fa-icon{
+
+    font-size: 40px;
+
+}
+
+.empty-table span{
+
+    font-size: 25px;
+
+}
