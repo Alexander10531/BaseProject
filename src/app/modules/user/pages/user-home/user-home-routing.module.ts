@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
-import { ScreenGuardsGuard } from 'src/app/core/guards/screenGuards/screen-guards.guard';
 import { UserHomeComponent } from './user-home.component';
 
 const routes: Routes = [
@@ -32,9 +31,6 @@ const routes: Routes = [
             {
                 path : 'profiles', 
                 loadChildren : () => import('../../components/profiles/profiles.module').then(m => m.ProfilesModule),
-                canActivate : [
-                    ScreenGuardsGuard
-                ]
             },
             {
                 path : 'inventary', 
