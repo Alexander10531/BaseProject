@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
-import { HttpUserService } from 'src/app/core/services/userService/http-user.service';
 
 @Component({
     selector: 'app-home',
@@ -13,21 +12,9 @@ export class HomeComponent implements OnInit{
     cardRequest!: any;
     errorRequest: boolean = false;
 
-    constructor(private userService:HttpUserService){
+    constructor(){
     }
 
-    ngOnInit(): void {
-        this.userService.getTeams().subscribe((res: any) => {
-            
-            this.cardRequest = res;
-
-        },
-        ((err: any) => {
-
-          this.errorRequest = true;
-
-        })
-      )
-    }
+    ngOnInit(): void {}
 
 }
