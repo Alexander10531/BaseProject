@@ -1,0 +1,146 @@
+.container-notFound{
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--main-ColorE);
+
+}
+
+.wave{
+
+    left: 0%;
+    top: 150px;
+    height: 100%;
+    width: 1000%;
+    position: absolute;
+    background-position: bottom;
+    background-image: url(../../../../assets/SVG/wave.svg);
+
+}
+
+.w1{
+    
+    animation: w1 30s linear infinite;
+
+}
+
+.container-code{
+
+    z-index: 0;
+    display: flex;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.container-code *{
+
+    margin: 0px auto 15px auto;
+
+}
+
+.main-container{
+  
+    z-index: 1;
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    color: var(--main-ColorE);
+    
+}
+  
+  
+svg{
+    
+    width:100%;
+    position: relative; 
+  
+}
+  
+.st0{
+
+    fill:white;
+
+}
+  
+.right-logo{
+
+    animation: animationRigth 1s 1s forwards;
+    
+}
+  
+.left-logo{
+      
+    animation: animationLeft 1s 1s forwards; 
+      
+}
+  
+.container-code{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: var(--mainFont);  
+      
+}
+  
+.container-code h1{
+
+    color: white;
+    font-size: 35px;
+
+}
+
+.container-text{
+
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    text-align: center;
+    position: absolute;
+
+}
+
+.container-text span{
+
+    font-size: 50px;
+
+}
+
+.descriptionError{
+    
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+
+}
+
+.button{
+
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    background: white;
+    color: var(--main-ColorE);
+
+}
+
+.button:hover{
+
+    color: white;
+    background: var(--main-ColorD);
+
+}  
+
+
+@keyframes w1 {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1200px;
+    }
+}
