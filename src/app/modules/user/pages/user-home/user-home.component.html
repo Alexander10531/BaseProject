@@ -2,10 +2,3 @@
 [componentsDropdown]="elementsDropdown">
 </app-header>
 <router-outlet></router-outlet>
-<app-modal-message
-    (buttonClicked)="buttonClicked($event)"
-    [button]="getButtonModal"
-    [content]="getContent"
-    [icon]="getIcon"
-    *ngIf="errorJwt.existError">
-</app-modal-message>

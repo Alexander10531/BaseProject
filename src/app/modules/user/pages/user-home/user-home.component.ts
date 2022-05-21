@@ -15,18 +15,13 @@ import { HttpUserService } from 'src/app/core/services/userService/http-user.ser
   templateUrl: './user-home.component.html',
   styleUrls: ['./user-home.component.css']
 })
-export class UserHomeComponent implements OnInit{
+export class UserHomeComponent{
 
     errorJwt : errorHandler = {
         existError : false,
     };
     userName! : string;
     elementsDropdown : componentesRedireccion[] = [
-        {
-            text : "Mi Perfil",
-            url : ["/home/profile"],
-            functionComponent : () => console.log("Mi perfil funcion")
-        }, 
         {
             text : "Cerrar sesion",
             url : ["/"], 
@@ -43,17 +38,6 @@ export class UserHomeComponent implements OnInit{
         private router : Router){
             
         }
-
-    ngOnInit(){
-        
-        this.userName = this.userService.getNameUser();
-        this.userService.getErrorJwt().subscribe((res) => {
-            
-            this.errorJwt = res; 
-            
-        })
-
-    }
 
     buttonClicked(event : buttonTable){
 
@@ -74,15 +58,6 @@ export class UserHomeComponent implements OnInit{
 
     }
     
-    get getContent() : contentText{
-
-        return { 
-            text : 'Su sesión ha expirado, se requiere que vuelva a iniciar sesión, por favor.', 
-            classes : ['errorValue', 'main']
-        }
-
-    }
-
     get getButtonModal() : buttonTable[]{
 
         return [
